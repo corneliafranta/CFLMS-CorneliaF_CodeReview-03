@@ -1,0 +1,101 @@
+@import "mixins"
+@import "breakpoints"
+@import "colorsFonts"
+@import "header"
+@import "nav"
+@import "footer"
+@import "form"
+@import "offers"
+
+
+#TeamMain
+  width: 90%
+  height: 45em
+  padding: 2em
+  margin: 0 auto
+
+  h1
+    font-family: $first-font
+    text-align: center
+    font-size: 3em
+    margin-block-start: 0
+
+  .row
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 2em
+
+    .teamElement
+      width: 25%
+      height: 30em
+      margin-right: 2em
+      margin-left: 2em
+      background-color: $header-color
+
+      font-family: $first-font
+      display: flex
+      flex-flow: column
+
+      img
+        width: 100%
+        height: 20em
+        object-fit: cover
+        margin-bottom: 1em
+
+      span
+        text-align: center
+
+      .memberName
+        font-size: 2em
+
+      .memberProfession
+        font-size: 1em
+        margin-bottom: 1em
+
+      button
+        margin: auto
+        margin-bottom: 1.5em
+        border: none
+        border-radius: 15px
+        padding: 0.5em
+        font-size: 1em
+        font-family: $first-font
+        background-color: $buttonColor2
+        color: white
+        width: 30%
+
+
+#teamDetail
+  background-color: $header-color
+  height: 20em
+  margin-bottom: 2em
+  display: none
+
+  #employeeDetail
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    width: 70%
+    font-family: $first-font
+
+  #teamDetailImage
+    width: 30%
+
+    img
+      width: 100%
+      height: 20em
+      object-fit: cover
+
+  #employeeDetailHeading
+    font-size: 3em
+
+  #employeeDetailProfession
+    font-size: 1em
+
+  h3
+
+
+

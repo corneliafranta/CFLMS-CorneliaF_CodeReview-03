@@ -1,0 +1,85 @@
+#offers
+  display: flex
+  flex-flow: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  margin: 1em
+  margin-top: 5em
+  margin-bottom: 5em
+
+  .offer
+    width: 25%
+    height: 20em
+    border: 1px lightgrey solid
+    border-top: 1px black solid
+    margin-left: 3em
+    margin-right: 3em
+    padding: 2em
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75)
+
+    +sm
+      width: 60%
+      margin-bottom: 2em
+      padding: 3em
+      padding-left: 4em
+
+    +xs
+      width: 60%
+      margin-bottom: 2em
+      padding: 3em
+      padding-left: 4em
+
+
+    h4
+      color: $offerColor1
+      font-size: 1.5em
+      margin-block-start: 0.5em
+      margin-block-end: 0
+
+      +sm
+        font-size: 2em
+
+
+    .text1
+      margin-block-start: 0
+      font-size: 1em
+
+      +sm
+        font-size: 1.2em
+
+    ul
+      +sm
+        font-size: 1.2em
+
+    li
+      list-style: none
+
+
+    li:before
+
+      content: "\2713"
+      margin-right: 0.8em
+      color: $buttonColor
+      font-weight: bold
+
+    h5
+      margin-block-end: 0
+      font-size: 1.2em
+      margin-top: 3em
+
+      +sm
+        margin-top: 2.5em
+        font-size: 1.5em
+
+    .text2
+      margin-block-start: 0
+      color: grey
+
+      +sm
+        font-size: 1.5em
+
+
+
+
+

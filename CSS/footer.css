@@ -1,0 +1,37 @@
+/* Colors */
+/* Imports */
+footer {
+  background-color: #1a1a1a;
+  height: 10em;
+  padding-top: 0.1em; }
+  footer ul {
+    list-style: none; }
+  footer li {
+    display: inline;
+    margin-right: 0.5em; }
+  footer a {
+    text-decoration: none;
+    color: white;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: bold; }
+  footer #footer-middle {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2em; }
+    footer #footer-middle img {
+      width: 12em; }
+      @media (min-device-width: 768px) and (max-device-width: 992px) {
+        footer #footer-middle img {
+          width: 25%; } }
+      @media (min-device-width: 992px) and (max-device-width: 1200px) {
+        footer #footer-middle img {
+          width: 16em; } }
+  footer #footer-bottom {
+    text-align: center;
+    color: white;
+    font-family: "Noto Sans TC", sans-serif;
+    position: relative;
+    top: 2.5em;
+    font-size: 0.8em; }
+
+/*# sourceMappingURL=footer.css.map */

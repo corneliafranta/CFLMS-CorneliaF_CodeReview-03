@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <!--CSS -->
+    <link rel="stylesheet" href="CSS/index.css">
+    <!--FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-row">
+        <div class="logo-container">
+            <img src="./MEDIA/logo.png" alt="logo" id="logo">
+        </div>
+        <div class="banner-container">
+            <a href="https://www.codefactory.wien/">
+                <img src="./MEDIA/banner.png" alt="Full Stack Web Development course in Vienna" id="banner">
+            </a>
+
+        </div>
+
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="main">
+    <div id="heading">
+        Car insurance
+    </div>
+    <div class="calcWindow" id="opagewindow"></div>
+    <div class="calcWindow" id="calcWindow">
+        <div id="headingCalc">Great coverage begins with a custom quote</div>
+
+        <form>
+
+            <div class="formRow">
+                <div class="formColumn">
+                    <label for="name">Your name:</label><br>
+                    <input type="text" id="name">
+                </div>
+                <div class="formColumn">
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age"><br>
+                </div>
+            </div>
+            <div class="formRow" id="row2">
+                <div class="formColumn">
+                    <label for="countrySel">Country:</label><br>
+                    <select name="countrySel" id="countrySel">
+                        <option value="austria">Austria</option>
+                        <option value="hungary">Hungary</option>
+                        <option value="greece">Greece</option>
+                    </select>
+                </div>
+                <div class="formColumn">
+                    <label for="horsepower">Horspower of your car:</label><br>
+                    <input type="number" id="horsepower"> <br>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formColumn">
+                    <button type="button" id="calculate">Calculate</button>
+
+
+                </div>
+            </div>
+            <p id="result"></p>
+        </form>
+    </div>
+
+
+</div>
+<div id="greyWindow">
+    <h2>Un-complicating car coverage</h2>
+    <p>Understanding your coverage options shouldn't be so hard.
+        We'll guide you through available coverage types,
+        starting with who and what is covered.
+    </p>
+</div>
+<div id="offers">
+
+    <div class='offer' id="offer1">
+        <h4>What comes standard</h4>
+        <p class="text1">The coverage you need</p>
+        <ul>
+            <li>Bodily Injury Liability</li>
+            <li>Property Damage</li>
+            <li>Medical Payments</li>
+        </ul>
+
+        <h5>Benefits</h5>
+        <p class="text2">
+            12-month rate guarantee | 24/7 customer service |Lifetime Repair Guarantee
+        </p>
+    </div>
+    <div class='offer' id="offer2">
+        <h4>Add-on protection & coverage</h4>
+        <p class="text1">For more peace of mind</p>
+        <ul>
+            <li>Better Car Replacement</li>
+            <li>Towing & Labor</li>
+            <li>Rental Car Coverage</li>
+        </ul>
+
+        <h5>Earned Benefits</h5>
+        <p class="text2">
+            Accident Forgiveness<sup>1</sup> | New Car Replacement&trade;
+        </p>
+    </div>
+
+
+</div>
+
+
+<footer>
+    <div id="footer-top">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Team</a></li>
+        </ul>
+    </div>
+    <div id="footer-middle"><img src="./MEDIA/logo-inv.png" alt="insurance cf"></div>
+    <div id="footer-bottom"><span>Cornelia Franta - CodeFactory2020</span></div>
+</footer>
+
+<script src="./JAVASCRIPT/main.js"></script>
+</body>
+</html>

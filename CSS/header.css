@@ -1,0 +1,39 @@
+/* Imports */
+header {
+  background-color: #f2e9ce;
+  margin-bottom: -0.1em; }
+  header .header-row {
+    height: 7em;
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: space-between; }
+    @media (min-device-width: 480px) and (max-device-width: 768px) {
+      header .header-row {
+        justify-content: left; } }
+    header .header-row .logo-container {
+      margin-left: 3%;
+      flex: 0 0 40%; }
+      @media (min-device-width: 480px) and (max-device-width: 768px) {
+        header .header-row .logo-container {
+          flex: 0 0 50%; } }
+      @media (min-device-width: 1200px) and (max-device-width: 768px) {
+        header .header-row .logo-container {
+          margin-left: 2.5%; } }
+    header .header-row .banner-container {
+      flex: 0 0 30%;
+      margin-right: 1.3%; }
+      @media (max-device-width: 480px) {
+        header .header-row .banner-container {
+          display: none; } }
+      @media (min-device-width: 480px) and (max-device-width: 768px) {
+        header .header-row .banner-container {
+          display: none; } }
+    @media (max-device-width: 480px) {
+      header .header-row #logo {
+        min-width: 100%; } }
+    @media (min-device-width: 480px) and (max-device-width: 768px) {
+      header .header-row #logo {
+        min-width: 70%; } }
+
+/*# sourceMappingURL=header.css.map */

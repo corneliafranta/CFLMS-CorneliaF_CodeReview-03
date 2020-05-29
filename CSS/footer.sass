@@ -1,0 +1,49 @@
+/* Colors */
+
+
+/* Imports */
+@import "mixins"
+@import "colorsFonts"
+
+
+footer
+  background-color: $footer-color
+  height: 10em
+  padding-top: 0.1em
+
+  ul
+    list-style: none
+
+
+  li
+    display: inline
+
+    margin-right: 0.5em
+
+  a
+    text-decoration: none
+    color: white
+    font-family: $nav-font
+    font-weight: bold
+
+  #footer-middle
+    display: flex
+    justify-content: flex-end
+    padding-right: 2em
+
+
+    img
+
+      width: 12em
+      +md
+        width: 25%
+      +lg
+        width: 16em
+
+  #footer-bottom
+    text-align: center
+    color: white
+    font-family: $nav-font
+    position: relative
+    top: 2.5em
+    font-size: 0.8em

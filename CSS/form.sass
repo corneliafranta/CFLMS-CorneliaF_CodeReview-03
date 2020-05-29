@@ -1,0 +1,90 @@
+form
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+  +xs
+    margin: auto
+
+.formRow
+  display: flex
+  flex-flow: row
+  justify-content: center
+  flex-wrap: wrap
+
+#row2
+  margin-bottom: 2em
+
+.formColumn
+  margin-left: 3em
+  margin-right: 3em
+
+  +sm
+    width: 60%
+    text-align: center
+    label
+      float: left
+      font-size: 2em
+
+  +xs
+
+    width: 60%
+    text-align: center
+
+    label
+      float: left
+      font-size: 2em
+
+
+
+  select
+    width: 12em
+    height: 2em
+    border: 1px solid black
+    background-color: white
+    margin-bottom: 0.5em
+
+    +sm
+      width: 20em
+      height: 2.5em
+      font-size: 1.5em
+
+    +xs
+
+      width: 20em
+      height: 2.5em
+      font-size: 1.5em
+
+  input
+    border: 1px solid black
+    background-color: white
+    width: 12em
+    height: 2em
+    margin-bottom: 0.5em
+
+    +sm
+      width: 20em
+      height: 2.5em
+      font-size: 1.5em
+    +xs
+      width: 20em
+      height: 2.5em
+      font-size: 1.5em
+
+
+  button
+    background-color: $buttonColor
+    border-radius: 10px
+    border: none
+    width: 7em
+    font-size: 1.5em
+    color: white
+    +sm
+      width: 9em
+      font-size: 2em
+      padding: 0.3em
+
+    +xs
+      width: 9em
+      font-size: 2.5em
+      padding: 0.3em

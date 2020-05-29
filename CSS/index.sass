@@ -1,0 +1,123 @@
+@import "mixins"
+@import "breakpoints"
+@import "colorsFonts"
+@import "header"
+@import "nav"
+@import "footer"
+@import "form"
+@import "offers"
+
+
+body, html
+  width: 100%
+  height: 100%
+
+#result
+  display: none
+  margin-top: 1.5em
+  font-size: 1.5em
+  color: green
+  justify-content: center
+
+
+.container
+  font-family: $first-font
+  background-image: url("../MEDIA/traffic-332857_1920.jpg")
+  background-size: cover
+  width: 100%
+  height: 40em
+  padding: 0
+
+  +sm
+    height: 65em
+
+  +xs
+    height: 65em
+
+
+
+  #heading
+    color: white
+    padding-top: 1em
+    font-size: 3em
+    padding-left: 1em
+    margin-bottom: 0.5em
+
+.calcWindow
+  border: 1px solid black
+  margin: auto
+  width: 70%
+  height: 25em
+  padding: 2em
+  position: absolute
+  left: 15%
+
+  +sm
+    height: 50em
+
+  +xs
+    height: 50em
+
+
+  #headingCalc
+    display: flex
+    justify-content: center
+    font-size: 2em
+    margin: auto
+    margin-bottom: 1em
+    width: 40%
+    text-align: center
+
+    +sm
+      margin-top: 1.5em
+      margin-bottom: 0.5em
+      width: 80%
+      font-size: 3em
+
+    +xs
+      margin-top: 1.5em
+      margin-bottom: 0.5em
+      width: 80%
+      font-size: 3em
+
+
+    #result
+      font-size: 1.5em
+      color: $buttonColor
+
+#opagewindow
+  background-color: white
+  opacity: 0.7
+
+
+
+
+
+
+
+#greyWindow
+  font-family: $first-font
+  background-color: $grey
+  text-align: center
+  padding: 1em
+
+
+  h2
+    margin-block-start: 0
+    margin-block-end: 0
+    font-weight: normal
+    font-size: 2em
+  p
+    margin-block-start: 0
+    font-size: 1.5em
+    width: 50%
+    margin: auto
+
+
+
+
+
+
+#offers
+  font-family: $first-font
+
