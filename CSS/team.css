@@ -15,43 +15,44 @@ header {
     header .header-row .logo-container {
       margin-left: 3%;
       flex: 0 0 40%; }
+      @media (min-device-width: 1200px) {
+        header .header-row .logo-container {
+          margin-left: 2.5%; } }
       @media (min-device-width: 480px) and (max-device-width: 768px) {
         header .header-row .logo-container {
           flex: 0 0 50%; } }
-      @media (min-device-width: 1200px) and (max-device-width: 768px) {
-        header .header-row .logo-container {
-          margin-left: 2.5%; } }
     header .header-row .banner-container {
       flex: 0 0 30%;
       margin-right: 1.3%; }
-      @media (max-device-width: 480px) {
-        header .header-row .banner-container {
-          display: none; } }
       @media (min-device-width: 480px) and (max-device-width: 768px) {
         header .header-row .banner-container {
           display: none; } }
-    @media (max-device-width: 480px) {
-      header .header-row #logo {
-        min-width: 100%; } }
+      @media (max-device-width: 480px) {
+        header .header-row .banner-container {
+          display: none; } }
     @media (min-device-width: 480px) and (max-device-width: 768px) {
       header .header-row #logo {
         min-width: 70%; } }
+    @media (max-device-width: 480px) {
+      header .header-row #logo {
+        min-width: 100%; } }
 
 /* Font */
 /* Imports */
 nav {
   height: 3em;
   background-color: #8a1515; }
-  @media (max-device-width: 480px) {
-    nav {
-      text-align: center;
-      margin-bottom: 1em;
-      margin-block-end: 0; } }
   @media (min-device-width: 480px) and (max-device-width: 768px) {
     nav {
       margin-bottom: 1em;
       text-align: center;
       margin-block-end: 0; } }
+  @media (max-device-width: 480px) {
+    nav {
+      text-align: center;
+      margin-bottom: 1em;
+      margin-block-end: 0;
+      height: 4em; } }
   nav ul {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -70,8 +71,10 @@ nav {
       position: relative;
       margin-right: 1em;
       margin-top: 1em; }
+      @media (max-device-width: 480px) {
+        nav li a {
+          font-size: 2em; } }
 
-/* Colors */
 /* Imports */
 footer {
   background-color: #1a1a1a;
@@ -87,18 +90,24 @@ footer {
     color: white;
     font-family: "Noto Sans TC", sans-serif;
     font-weight: bold; }
+    @media (min-device-width: 480px) and (max-device-width: 768px) {
+      footer a {
+        font-size: 1.5em; } }
+    @media (max-device-width: 480px) {
+      footer a {
+        font-size: 1.5em; } }
   footer #footer-middle {
     display: flex;
     justify-content: flex-end;
     padding-right: 2em; }
     footer #footer-middle img {
       width: 12em; }
-      @media (min-device-width: 768px) and (max-device-width: 992px) {
-        footer #footer-middle img {
-          width: 25%; } }
       @media (min-device-width: 992px) and (max-device-width: 1200px) {
         footer #footer-middle img {
           width: 16em; } }
+      @media (min-device-width: 768px) and (max-device-width: 992px) {
+        footer #footer-middle img {
+          width: 25%; } }
   footer #footer-bottom {
     text-align: center;
     color: white;
@@ -106,6 +115,16 @@ footer {
     position: relative;
     top: 2.5em;
     font-size: 0.8em; }
+    @media (min-device-width: 480px) and (max-device-width: 768px) {
+      footer #footer-bottom {
+        font-size: 1em;
+        position: relative;
+        top: 1em; } }
+    @media (max-device-width: 480px) {
+      footer #footer-bottom {
+        font-size: 1em;
+        position: relative;
+        top: 1em; } }
 
 form {
   display: flex;
@@ -147,6 +166,10 @@ form {
     border: 1px solid black;
     background-color: white;
     margin-bottom: 0.5em; }
+    @media (min-device-width: 1200px) {
+      .formColumn select {
+        width: 18em;
+        height: 3em; } }
     @media (min-device-width: 480px) and (max-device-width: 768px) {
       .formColumn select {
         width: 20em;
@@ -163,6 +186,10 @@ form {
     width: 12em;
     height: 2em;
     margin-bottom: 0.5em; }
+    @media (min-device-width: 1200px) {
+      .formColumn input {
+        width: 18em;
+        height: 3em; } }
     @media (min-device-width: 480px) and (max-device-width: 768px) {
       .formColumn input {
         width: 20em;
@@ -180,6 +207,9 @@ form {
     width: 7em;
     font-size: 1.5em;
     color: white; }
+    @media (min-device-width: 1200px) {
+      .formColumn button {
+        margin-top: 1em; } }
     @media (min-device-width: 480px) and (max-device-width: 768px) {
       .formColumn button {
         width: 9em;
@@ -208,7 +238,7 @@ form {
     margin-left: 3em;
     margin-right: 3em;
     padding: 2em;
-    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75); }
+    box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.75); }
     @media (min-device-width: 480px) and (max-device-width: 768px) {
       #offers .offer {
         width: 60%;
@@ -273,7 +303,7 @@ form {
   #TeamMain .row {
     display: flex;
     flex-flow: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-bottom: 2em; }
     #TeamMain .row .teamElement {
@@ -285,6 +315,12 @@ form {
       font-family: "Roboto Condensed", sans-serif;
       display: flex;
       flex-flow: column; }
+      @media (max-device-width: 480px) {
+        #TeamMain .row .teamElement {
+          margin-left: 1em;
+          margin-right: 1em;
+          height: 32em;
+          width: 28%; } }
       #TeamMain .row .teamElement img {
         width: 100%;
         height: 20em;
@@ -297,6 +333,9 @@ form {
       #TeamMain .row .teamElement .memberProfession {
         font-size: 1em;
         margin-bottom: 1em; }
+        @media (max-device-width: 480px) {
+          #TeamMain .row .teamElement .memberProfession {
+            font-size: 1.5em; } }
       #TeamMain .row .teamElement button {
         margin: auto;
         margin-bottom: 1.5em;
@@ -308,6 +347,9 @@ form {
         background-color: #ae9f73;
         color: white;
         width: 30%; }
+        @media (max-device-width: 480px) {
+          #TeamMain .row .teamElement button {
+            width: 35%; } }
 
 #teamDetail {
   background-color: #f2e9ce;
@@ -331,5 +373,17 @@ form {
     font-size: 3em; }
   #teamDetail #employeeDetailProfession {
     font-size: 1em; }
+    @media (max-device-width: 480px) {
+      #teamDetail #employeeDetailProfession {
+        font-size: 1.5em; } }
+  @media (max-device-width: 480px) {
+    #teamDetail h3 {
+      font-size: 1.7em; } }
+  #teamDetail .employeeDetailContact a {
+    color: black;
+    text-decoration: none; }
+  @media (max-device-width: 480px) {
+    #teamDetail .employeeDetailContact {
+      font-size: 1.5em; } }
 
 /*# sourceMappingURL=team.css.map */

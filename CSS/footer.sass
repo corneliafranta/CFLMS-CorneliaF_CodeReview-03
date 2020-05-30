@@ -1,5 +1,3 @@
-/* Colors */
-
 
 /* Imports */
 @import "mixins"
@@ -26,6 +24,12 @@ footer
     font-family: $nav-font
     font-weight: bold
 
+    +sm
+      font-size: 1.5em
+
+    +xs
+      font-size: 1.5em
+
   #footer-middle
     display: flex
     justify-content: flex-end
@@ -35,10 +39,12 @@ footer
     img
 
       width: 12em
-      +md
-        width: 25%
+
       +lg
         width: 16em
+
+      +md
+        width: 25%
 
   #footer-bottom
     text-align: center
@@ -47,3 +53,13 @@ footer
     position: relative
     top: 2.5em
     font-size: 0.8em
+
+    +sm
+      font-size: 1em
+      position: relative
+      top: 1em
+
+    +xs
+      font-size: 1em
+      position: relative
+      top: 1em

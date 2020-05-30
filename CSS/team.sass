@@ -23,7 +23,7 @@
   .row
     display: flex
     flex-flow: row
-    flex-wrap: wrap
+    flex-wrap: nowrap
     justify-content: center
     margin-bottom: 2em
 
@@ -37,6 +37,12 @@
       font-family: $first-font
       display: flex
       flex-flow: column
+
+      +xs
+        margin-left: 1em
+        margin-right: 1em
+        height: 32em
+        width: 28%
 
       img
         width: 100%
@@ -54,6 +60,9 @@
         font-size: 1em
         margin-bottom: 1em
 
+        +xs
+          font-size: 1.5em
+
       button
         margin: auto
         margin-bottom: 1.5em
@@ -66,6 +75,8 @@
         color: white
         width: 30%
 
+        +xs
+          width: 35%
 
 #teamDetail
   background-color: $header-color
@@ -95,7 +106,19 @@
   #employeeDetailProfession
     font-size: 1em
 
+    +xs
+      font-size: 1.5em
+
   h3
+    +xs
+      font-size: 1.7em
 
+  .employeeDetailContact
 
+    a
+      color: black
+      text-decoration: none
+
+    +xs
+      font-size: 1.5em
 

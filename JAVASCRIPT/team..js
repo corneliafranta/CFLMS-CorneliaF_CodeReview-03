@@ -1,5 +1,6 @@
 var teamContainer = document.getElementById('team');
 var teamDetailContainer = document.getElementById('teamDetail');
+var teamMainContainer = document.getElementById('TeamMain');
 
 class TeamMember {
 
@@ -13,14 +14,12 @@ class TeamMember {
         this.createMemberEntry()
     }
 
-
     createMemberDetail() {
+        teamMainContainer.style.height = '60em';
 
-
-        var teamMemberObject = teamMemberObjects[this.id];
-        document.getElementById('TeamMain').style.height='60em';
         teamDetailContainer.innerHTML = "";
         teamDetailContainer.style.display = 'flex';
+
         var memberDetailRow = document.createElement('div');
         memberDetailRow.setAttribute('class', 'row');
 
@@ -28,8 +27,8 @@ class TeamMember {
         imageDiv.setAttribute('id', 'teamDetailImage');
 
         var image = document.createElement('img');
-        image.setAttribute('src', `./MEDIA/${teamMemberObject.image}`);
-        image.setAttribute('alt', `Picture ${teamMemberObject.firstName} `);
+        image.setAttribute('src', `./MEDIA/${this.image}`);
+        image.setAttribute('alt', `Picture ${this.firstName} `);
 
         imageDiv.appendChild(image);
         memberDetailRow.appendChild(imageDiv);
@@ -39,22 +38,22 @@ class TeamMember {
 
         var detailHeading = document.createElement('span');
         detailHeading.setAttribute('id', 'employeeDetailHeading');
-        detailHeading.innerHTML = `${teamMemberObject.firstName} ${teamMemberObject.lastName}`;
+        detailHeading.innerHTML = `${this.firstName} ${this.lastName}`;
 
         var detailProfession = document.createElement('span');
         detailProfession.setAttribute('id', 'employeeDetailProfession');
-        detailProfession.innerHTML = teamMemberObject.profession;
+        detailProfession.innerHTML = this.profession;
 
         var detailContactHeader = document.createElement('h3');
         detailContactHeader.innerHTML = 'How to contact me';
 
         var detailContactPhone = document.createElement('span');
         detailContactPhone.setAttribute('class', 'employeeDetailContact');
-        detailContactPhone.innerHTML = `Telephone: ${teamMemberObject.telephone}`;
+        detailContactPhone.innerHTML = `Telephone: ${this.telephone}`;
 
         var detailContactEmail = document.createElement('span');
         detailContactEmail.setAttribute('class', 'employeeDetailContact');
-        detailContactEmail.innerHTML = `Email: ${teamMemberObject.email}`;
+        detailContactEmail.innerHTML = `Email: <a href="mailto:${this.email}?subject=insuranceCF">${this.email}</a>`;
 
         detail.appendChild(detailHeading);
         detail.appendChild(detailProfession);
@@ -85,7 +84,7 @@ class TeamMember {
         var button = document.createElement('button');
         button.setAttribute('type', 'button');
         button.innerHTML = 'learn more';
-        button.addEventListener('click', this.createMemberDetail);
+        button.addEventListener('click', this.createMemberDetail.bind(this));
         button.setAttribute("id", this.firstName);
 
         teamElement.appendChild(image);
@@ -93,13 +92,8 @@ class TeamMember {
         teamElement.appendChild(profession);
         teamElement.appendChild(button);
         teamContainer.appendChild(teamElement);
-
-
     }
-
-
 }
-
 
 var teamMembers = [
     {
@@ -127,7 +121,7 @@ var teamMembers = [
         email: 'laura@insurancecf.net'
     }
 ];
-teamMemberObjects = {};
+
 teamMembers.forEach(function (teamMember) {
-    teamMemberObjects[teamMember.firstName] = new TeamMember(teamMember);
+    new TeamMember(teamMember);
 });
